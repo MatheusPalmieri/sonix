@@ -3,6 +3,16 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@theme {
+  --font-display: 'Inter', 'sans-serif';
+  --color-background: #1d2123;
+  --color-foreground: #efeee0;
+  --color-primary: #307db8;
+  --color-secondary: #facd66;
+  --color-dark: #1a1e1f;
+  --color-alt: #a4c7c6;
+}
+
 :root {
   --radius: 0.625rem;
   --font-display: 'Inter', 'sans-serif';
