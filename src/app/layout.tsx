@@ -1,3 +1,6 @@
+import { Logo } from '@/assets/icons/Logo';
+import { Navbar } from '@/components/Navbar';
+import { Search } from '@/components/Search';
 import '@/styles/global.css';
 import '@/styles/theme.css';
 import type { Metadata } from 'next';
@@ -16,17 +19,18 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className='relative flex min-h-dvh flex-col space-y-6 p-6 antialiased'>
-        <div className='flex'>
-          <div>Logo</div>
-          <input type='text' placeholder='search' className='h-11' />
-        </div>
+        <header className='flex space-x-6'>
+          <Logo />
+          <Search />
+        </header>
 
-        <div className='flex h-full flex-grow space-x-6'>
-          <div className='flex w-11 flex-col'>navbar</div>
-          <div className='flex flex-grow flex-col'>{children}</div>
-        </div>
+        <section className='flex h-full flex-grow space-x-6'>
+          <Navbar />
 
-        <div className='absolute right-0 bottom-0 left-0 h-32'>player</div>
+          <main className='flex flex-grow flex-col'>{children}</main>
+        </section>
+
+        <section className='absolute right-0 bottom-0 left-0 h-32'>player</section>
       </body>
     </html>
   );
