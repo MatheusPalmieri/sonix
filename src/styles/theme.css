@@ -9,14 +9,3 @@
   --color-dark: #1a1e1f;
   --color-alt: #a4c7c6;
 }
-
-@layer base {
-  html {
-    @apply font-display;
-  }
-
-  body {
-    background-color: var(--color-background);
-    color: var(--color-foreground);
-  }
-}
